@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+:root{
+    --heroText: 'Orbitron', sans-serif;
+    --textFont: 'Share Tech Mono', monospace
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    background: #FF3334;
+}
+
+.hero{
+    background: linear-gradient(70deg, #2798FC, #55C1FF);
+    height: 20vh;
+    box-shadow: 0 6px 20px 0px black;
+    position: relative;
+}
+
+.hero__texture{
+    height: 20vh;
+    width: 100vw;
+    background-image: url("../img/texture.png");
+    
+    filter: brightness(2.5);
+    animation-name: brillo;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+     
+    top:0;
+    left: 0;
+    z-index: 2;
+    position:absolute;
+}
+
+/* Animación */  
+@keyframes brillo {
+    from {filter: brightness(2.7);}
+    to {filter: brightness(2.9);}
+}
+
+.hero__texto{
+    position: relative;
+    top: 50%;  
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 325%;
+    font-family: var(--heroText);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    transform: translateY(-50%);    
+}
+
+/* Animación */
+.hero__texto--animado{
+  animation: typewriter 2s steps(16) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 5em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0, 0, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
+
+/* Figura de PokeBall*/
+
+.figRed::before{
+    content: '';
+	display: inline-block;
+    height: 20vh;
+    width: 15vw; 
+    background: #FF3334;
+    z-index: 3;
+    position:absolute;
+}
+
+.figRed::after{
+    content: '';
+	display: inline-block;
+    height: 20vh;
+    width: 15vw;
+    background: #FF3334;
+    right: 0; 
+    z-index: 3;
+    position:absolute;
+}
+
+.figBlack::before{
+    content: '';
+    display: inline-block;
+    height: 20vh;
+    width: 2vw;
+    left: 13%;
+    background: black;
+    
+    z-index: 4;
+    position:absolute;
+}
+
+.figBlack::after{
+    content: '';
+    display: inline-block;
+    height: 20vh;
+    width: 2vw;
+    right: 13%;
+    background: black;
+    z-index: 5;
+    position:absolute;
+}
+
+.figWhite::before{
+    content: '';
+    display: inline-block;
+    height: 15vh;
+    width: 4vw;
+    left: 11%;
+    top: 2%;
+    background: white;
+    border-radius: 100px 0 0 100px;
+    z-index: 6;
+    position:absolute;
+}
+
+.figWhite::after{
+    content: '';
+    display: inline-block;
+    height: 15vh;
+    width: 4vw;
+    right: 11%;
+    top: 2%;
+    background: white;
+    border-radius: 0 100px 100px 0;
+    z-index: 7;
+    position:absolute;
+}
+
+.fig1Black::before{
+    content: '';
+    display: inline-block;
+    height: 18vh;
+    width: 4.5vw;
+    left: 10%;
+    top: 0.5%;
+    background: black;
+    border-radius: 100px 0 0 100px;
+    z-index: 5;
+    position:absolute;
+}
+
+.fig1Black::after{
+    content: '';
+    display: inline-block;
+    height: 18vh;
+    width: 4.5vw;
+    right: 10%;
+    top: 0.5%;
+    background: black;
+    border-radius: 0 100px 100px 0;
+    z-index: 6;
+    position:absolute;
+}
+
+.contenido{
+    height: 50vh;
+    margin: 25px;
+    /* background: gray; */
+}
+
+.contenido__input{
+    padding-left: 115px;
+    padding-top: 25px;
+    position: relative;
+}
+
+.contenido__input::before{
+    content: '';
+    display: inline-block;
+    left: 25px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background: radial-gradient(#9EDCFF, #52C4FA, #35A4F1);
+    position: absolute;
+    z-index: 10;
+}
+
+.contenido__input--item{
+    padding-top: 10px;
+}
+
+input{
+    height: 45px;
+    width: 85%;
+    background: #901416;
+    border-style: none;
+    font-family: var(--textFont);
+    font-size: large;
+    font-weight: 500;
+    color: white;
+    padding-left: 15px;
+    box-shadow: inset 0px 0px 20px 0px black;
+}
+
+.contenido__cards{
+    height: 10vh;
+    background: #8FE3FF;
+    border: 2px solid #0B56A3;
+    margin: 25px;
+    margin-top: 35px;
+}
