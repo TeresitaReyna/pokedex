@@ -217,3 +217,40 @@ input{
     margin: 25px;
     margin-top: 35px;
 }
+
+.imagen-pokemon{
+    background: blue;
+    border-radius: 50%;
+}
+
+.centrado{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.pokemon-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    grid-gap: 2rem;
+}
+
+.barrita{
+    margin: 25px 0;
+}
+
+.titulo-pokemon{
+    font-size: 1em;
+    text-align: center;
+}
+
+.tipos{
+    border: 1px solid black;
+}
+
+.card-pokemon{
+    background: red;
+}
