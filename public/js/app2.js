@@ -18,12 +18,16 @@ class pokemon {     //Objeto de los pokemon
         const dive = document.createElement('div'); //Crea un DIV
         dive.innerHTML =    //Pone la info en el HTML
         `<div class="card-pokemon">
-            <img src="${this.img}" class="imagen-pokemon u-full-width">
+            <div class="image">
+                <div class="image__container">
+                    <img src="${this.img}" class="imagen-pokemon u-full-width">
+                </div>
+            </div>
             <div class="info-card info-card__custom">
+                <p class="id-pokemon">No° ${this.id.toString().padStart(3, 0)}</p>
                 <h4 class="titulo-pokemon">${this.nombre}</h4>
-                <p class= "tipos">${this.tipos.join('&nbsp &nbsp')}</p>
-                <p>${this.id.toString().padStart(3, 0)}</p>
-                <p>${this.habilidad.join('&nbsp &nbsp')}</p>
+                <p class="tipos">${this.tipos.join('&nbsp &nbsp')}</p>
+                <p class="habilidades-pokemon">${this.habilidad.join('&nbsp &nbsp')}</p>
                 <li">
                     <div style="display: flex; gap: 25px;  align-items: center;">
                         <p style="text-align: left;">${this.n_stats.join('<br/>')}</p>
