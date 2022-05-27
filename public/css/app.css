@@ -214,6 +214,10 @@ input{
     box-shadow: inset 0px 0px 20px 0px black;
 }
 
+.buscarpkm::placeholder{
+    color: white;
+}
+
 .contenido__cards{
     background: rgb(85, 144, 189);
     background: linear-gradient(
@@ -327,8 +331,4 @@ input{
     flex-direction: column;
 
     padding: 40px 40px 40px 40px;
-}
-
-.buscarpkm{
-    color: white;
 }
