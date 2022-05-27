@@ -56,7 +56,7 @@ class pokemon {     //Objeto de los pokemon
 Pokemons()  //Manda a llamar a la función que inicializa NO BORRAR
 
 function Pokemons(){ //Inicializa los pokemon, en el limit pones cuantos máximo
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=150&offset=0`)
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=0`)
     .then((res) => res.json())
     .then((data) => {
         createPokemon(data) //Llama a la función que vacía los datos de la API al objeto

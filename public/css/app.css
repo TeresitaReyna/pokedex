@@ -176,7 +176,6 @@ body{
 .contenido{
     height: 50vh;
     margin: 25px;
-    /* background: #f2f2f2; */
 }
 
 .contenido__input{
@@ -219,34 +218,19 @@ input{
 }
 
 .contenido__cards{
-    background: rgb(85, 144, 189);
-    background: linear-gradient(
-      90deg,
-      rgba(85, 144, 189, 1) 0%,
-      rgba(108, 183, 240, 1) 54%,
-      rgb(170, 208, 237) 82%);
+    background: radial-gradient(rgba(85, 144, 189, 1), rgba(108, 183, 240, 1), rgb(170, 208, 237));
     margin: 25px;
     margin-top: 35px;
-    padding: 20px;
+    padding: 50px 45px 50px 45px;
+    box-shadow: inset 0px 0px 20px 4px #0B56A3;
 }
 
 /*  Pokemones */
 .image{
     width: 10vw;
-
-    /* background: linear-gradient(135deg, #f2f2f2, #f2f2f2 0)
-                top left,
-                linear-gradient(-135deg, #f2f2f2, #f2f2f2 0)
-                top right,
-                linear-gradient(-45deg, #f2f2f2, #f2f2f2 0)
-                bottom right,
-                linear-gradient(45deg, transparent 20px, #f2f2f2 0)
-                bottom left;
-    background-size: 75% 75%; */
     background-repeat: no-repeat;
     background: #f2f2f2;
     border-radius: 25px;
-    /* border-radius: 20px; */
     box-shadow: 0px 0px 20px -5px black;
 
     display: flex;
