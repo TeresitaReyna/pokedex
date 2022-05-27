@@ -253,6 +253,11 @@ input{
 .imagen-pokemon{
     background-size: contain;
     width: 10vw;
+    transition: transform .2s;
+}
+ 
+.imagen-pokemon:hover {
+    transform: scale(1.5); 
 }
 
 .pokemon-container{
