@@ -25,7 +25,7 @@ body{
 
 .hero__texture{
     height: 20vh;
-    width: 100vw;
+    width: 90vw;
     background-image: url("../img/texture.png");
     
     filter: brightness(2.5);

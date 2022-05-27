@@ -28,8 +28,8 @@ class pokemon {     //Objeto de los pokemon
                 <h4 class="titulo-pokemon">${this.nombre}</h4>
                 <p class="tipos">${this.tipos.join('&nbsp &nbsp')}</p>
                 <p class="habilidades-pokemon">${this.habilidad.join('&nbsp &nbsp')}</p>
-                <li">
-                    <div style="display: flex; gap: 25px;  align-items: center;">
+                <li" class="stats">
+                    <div style="display: flex; gap: 25px;  align-items: center;" class="stats--1">
                         <p style="text-align: left;">${this.n_stats.join('<br/>')}</p>
                         <p>${this.stats.join('<br/>')}</p>
                     </div>
