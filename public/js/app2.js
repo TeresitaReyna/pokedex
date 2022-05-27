@@ -1,5 +1,6 @@
 const pokemonContainer = document.querySelector(".pokemon-container"); //Contenedor del HTML
 const input = document.querySelector("#searchInput"); //Contenedor de la busqueda
+const spinner = document.querySelector("#spinner");
 let pokemons = []   //Array original de todos los pokemons
 let busca = []      //Array que muestra los de la busqueda
 let count = 0       //Contador, no lo muevan o explota esto
@@ -56,10 +57,11 @@ class pokemon {     //Objeto de los pokemon
 Pokemons()  //Manda a llamar a la función que inicializa NO BORRAR
 
 function Pokemons(){ //Inicializa los pokemon, en el limit pones cuantos máximo
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=150&offset=0`)
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=151&offset=0`)
     .then((res) => res.json())
     .then((data) => {
         createPokemon(data) //Llama a la función que vacía los datos de la API al objeto
+        spinner.style.display = "none";
     }); 
 }
 
@@ -85,10 +87,13 @@ function createPokemon(data){   //Crea los objetos pokemon en base a la API
             }
             
             pokemons [count] = new pokemon(data.name,data.id.toString().padStart(3, 0),tipos,stats,statsName,hab,data.sprites.front_default)
+            spinner.style.display = "block";
             pokemons[count].imprimir()
+            
             pokemons[count].cargarBuscador()
             count++
         }); 
+        
         return poke
     })
 }
